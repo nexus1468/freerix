@@ -7,8 +7,8 @@ $config = [
     'log_dir' => 'logs/',
     'upload_dir' => 'uploads/',
     'admin_password' => 'admin123', // для доступа к панели
-    'telegram_bot' => 'YOUR_BOT_TOKEN', // опционально
-    'telegram_chat' => 'YOUR_CHAT_ID'   // опционально
+    'telegram_bot' => '8786610908:AAH6Sz242suuYGNhbT1hiGSZ6TWxnwL345U', // опционально
+    'telegram_chat' => '8147099172'   // опционально
 ];
 
 // Создаем директории
